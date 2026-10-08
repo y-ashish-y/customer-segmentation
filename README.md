@@ -1,11 +1,26 @@
+# Customer Segmentation
 
-# Customer Segmentation Classification
+Multi-class classification that predicts which of four customer segments (A, B, C, D) a new customer belongs to, so a sales team can target outreach the same way it did in its existing market.
 
-An automobile company has plans to enter new markets with their existing products (P1, P2, P3, P4, and P5). After intensive market research, they’ve deduced that the behavior of the new market is similar to their existing market.
+**Dataset:** Customer segmentation data from an Analytics Vidhya hackathon. The task is to score 2,627 new potential customers.
 
-In their existing market, the sales team has classified all customers into 4 segments (A, B, C, D ). Then, they performed segmented outreach and communication for a different segment of customers. This strategy has work e exceptionally well for them. They plan to use the same strategy for the new markets and have identified 2627 new potential customers.
+## Contents
 
-You are required to help the manager to predict the right group of the new customers.
+| File | Description |
+|---|---|
+| `Customer_segmentation.ipynb` | Segment prediction, model comparison, evaluation, and feature importance |
 
+## Approach
 
-Acknowledgements This dataset was acquired from the Analytics Vidhya hackathon.
+1. **Predicting segmentation:** data preparation and encoding of customer attributes
+2. **Supervised ML:** XGBoost classifier on a train/test split
+3. **Model evaluation:** scikit-learn classification report (per-class precision, recall, F1)
+4. **Feature importance:** profession, age, and family size are the strongest drivers of segment membership
+
+## Run
+
+Open the notebook in Jupyter or Google Colab. Install the dependencies:
+
+```bash
+pip install pandas numpy matplotlib seaborn plotly scikit-learn xgboost
+```
